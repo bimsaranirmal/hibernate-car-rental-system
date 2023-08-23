@@ -12,7 +12,6 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 
-import javax.persistence.OneToOne;
 import javax.persistence.Table;
 
 import org.hibernate.annotations.CreationTimestamp;
@@ -48,6 +47,9 @@ public class DriverEntity {
 
     @Column(name = "contactNo", length = 20)
     private String contactNo;
+
+    @Column(name = "salaryPerDay", length = 20)
+    private Integer salaryPerDay;
 
      @CreationTimestamp
     @Column(name= "create_date", nullable = false)

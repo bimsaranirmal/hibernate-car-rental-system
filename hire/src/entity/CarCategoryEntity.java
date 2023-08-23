@@ -19,7 +19,7 @@ import lombok.ToString;
 
 @Entity
 @Table(name = "carCategory")
-
+@NoArgsConstructor
 @AllArgsConstructor
 @Getter
 @Setter
@@ -39,42 +39,5 @@ public class CarCategoryEntity {
     @OneToMany(mappedBy = "carCategory", cascade = CascadeType.ALL)
     private List<CarEntity> cars;
 
-    // Constructors, getters, setters, and other methods
-
-    // Constructor
-    public CarCategoryEntity() {
-    }
-
-    // Getters and setters
-    public int getCategoryID() {
-        return categoryID;
-    }
-
-    public void setCategoryID(int categoryID) {
-        this.categoryID = categoryID;
-    }
-
-    public String getCategoryName() {
-        return categoryName;
-    }
-
-    public void setCategoryName(String categoryName) {
-        this.categoryName = categoryName;
-    }
-
-    public double getDailyRate() {
-        return dailyRate;
-    }
-
-    public void setDailyRate(double dailyRate) {
-        this.dailyRate = dailyRate;
-    }
-
-    public List<CarEntity> getCars() {
-        return cars;
-    }
-
-    public void setCars(List<CarEntity> cars) {
-        this.cars = cars;
-    }
+    
 }

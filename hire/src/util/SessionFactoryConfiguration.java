@@ -9,6 +9,10 @@ import entity.CarEntity;
 import entity.CustomerEntity;
 import entity.DriverEntity;
 import entity.RentalEntity;
+import entity.ReturnEntity;
+import entity.ReviewDetailEntity;
+import entity.ReviewEntity;
+import entity.UserEntity;
 
 public class SessionFactoryConfiguration {
 
@@ -22,7 +26,11 @@ public class SessionFactoryConfiguration {
             .addAnnotatedClass(DriverEntity.class)
             .addAnnotatedClass(RentalEntity.class)
             .addAnnotatedClass(CarEntity.class)
-            .addAnnotatedClass(CarCategoryEntity.class);
+            .addAnnotatedClass(CarCategoryEntity.class)
+            .addAnnotatedClass(ReviewEntity.class)
+            .addAnnotatedClass(ReviewDetailEntity.class)
+            .addAnnotatedClass(ReturnEntity.class)
+            .addAnnotatedClass(UserEntity.class);
 
         sessionFactory = configuration.buildSessionFactory();
     }

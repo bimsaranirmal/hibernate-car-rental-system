@@ -1,7 +1,5 @@
 package entity;
 
-import java.sql.Date;
-
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -18,37 +16,25 @@ import lombok.Setter;
 import lombok.ToString;
 
 @Entity
-@Table(name = "rental")
-@NoArgsConstructor
+@Table(name = "reviewdetail")
 @AllArgsConstructor
+@NoArgsConstructor
 @Getter
 @Setter
 @ToString
-public class RentalEntity {
-     @Id
+public class ReviewDetailEntity {
+    @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "RentalID")
-    private int rentalID;
+    @Column(name = "id")
+    private Long id;
 
     @ManyToOne
-    @JoinColumn(name = "CarID")
-    private CarEntity car;
+    @JoinColumn(name = "reviewId")
+    private ReviewEntity issue;
 
     @ManyToOne
-    @JoinColumn(name = "CustomerID")
-    private CustomerEntity customer;
+    @JoinColumn(name = "driverId")
+    private DriverEntity driver;
 
-    @Column(name = "RentalStartDate")
-    private Date rentalStartDate;
-
-    @Column(name = "RentalEndDate")
-    private Date rentalEndDate;
-
-    @Column(name = "TotalAmount")
-    private double totalAmount;
-
-    @Column(name = "Returned")
-    private boolean returned;
-
-   
+    
 }

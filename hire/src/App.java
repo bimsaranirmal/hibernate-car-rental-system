@@ -1,15 +1,12 @@
-import java.util.ArrayList;
-import java.util.List;
-
-import org.hibernate.Session;
-
-import entity.CustomerEntity;
 import repository.CarCategoryRepository;
 import repository.CarRepository;
 import repository.CustomerRepository;
 import repository.DriverRepository;
 import repository.RentalRepository;
-import util.SessionFactoryConfiguration;
+import repository.ReturnRepository;
+import repository.ReviewDetailRepository;
+import repository.ReviewRepository;
+import repository.UserRepository;
 
 public class App {
     public static void main(String[] args) throws Exception {
@@ -18,6 +15,10 @@ public class App {
         RentalRepository rentalRepo = new RentalRepository();
         CarRepository carRepo = new CarRepository();
         CarCategoryRepository carCatagoryRepo = new CarCategoryRepository();
+        ReviewRepository reviewRepo = new ReviewRepository();
+        ReviewDetailRepository reviewDetailRepo = new ReviewDetailRepository();
+        ReturnRepository returnRepo = new ReturnRepository();
+        UserRepository userRepo = new UserRepository();
         
             // Create a new CustomerEntity instance
             /* 
