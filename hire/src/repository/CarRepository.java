@@ -10,20 +10,20 @@ import util.SessionFactoryConfiguration;
 public class CarRepository {
     Session session = SessionFactoryConfiguration.getInstance().getSession();
     
-    public Integer saveCar(CarEntity carEntity){
+    public Long  saveCar(CarEntity carEntity){
 
         Transaction transaction = session.beginTransaction();
         try {
-            Integer id = (Integer)session.save(carEntity);
+            Long  id = (Long )session.save(carEntity);
             transaction.commit();
             return id;
         } catch (Exception e) {
             transaction.rollback();
-            return - 1;
+            return null;
         }
     }
 
-    public CarEntity getCar(Integer id) {
+    public CarEntity getCar(Long id) {
         CarEntity carEntity = session.get(CarEntity.class, id);
         return carEntity;
     }

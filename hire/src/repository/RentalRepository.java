@@ -10,20 +10,20 @@ import util.SessionFactoryConfiguration;
 public class RentalRepository {
      Session session = SessionFactoryConfiguration.getInstance().getSession();
     
-    public Integer saveRental(RentalEntity rentalEntity){
+    public String  saveRental(RentalEntity rentalEntity){
 
         Transaction transaction = session.beginTransaction();
         try {
-            Integer id = (Integer)session.save(rentalEntity);
+            String id = (String )session.save(rentalEntity);
             transaction.commit();
             return id;
         } catch (Exception e) {
             transaction.rollback();
-            return - 1;
+            return null;
         }
     }
 
-    public RentalEntity getRental(Integer id) {
+    public RentalEntity getRental(String  id) {
         RentalEntity rentalEntity = session.get(RentalEntity.class, id);
         return rentalEntity;
     }

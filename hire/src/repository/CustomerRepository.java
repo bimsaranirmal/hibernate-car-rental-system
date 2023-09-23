@@ -1,35 +1,39 @@
 package repository;
 
 import util.SessionFactoryConfiguration;
+
+import java.util.List;
+
 import org.hibernate.Session;
 import org.hibernate.Transaction;
+import org.hibernate.query.Query;
 
 import entity.CustomerEntity;
 
 
 
 public class CustomerRepository {
-     Session session = SessionFactoryConfiguration.getInstance().getSession();
+    Session session = SessionFactoryConfiguration.getInstance().getSession();
     
-    public Integer saveCustomer(CustomerEntity customerEntity){
+    public String  saveCustomer(CustomerEntity customerEntity){
 
         Transaction transaction = session.beginTransaction();
         try {
-            Integer id = (Integer)session.save(customerEntity);
+            String  id = (String )session.save(customerEntity);
             transaction.commit();
             return id;
         } catch (Exception e) {
             transaction.rollback();
-            return - 1;
+            return null;
         }
     }
 
-    public CustomerEntity getCustomer(Integer id) {
+    public CustomerEntity getCustomer(String  id) {
         CustomerEntity customerEntity = session.get(CustomerEntity.class, id);
         return customerEntity;
     }
 
-    public void updateCustomer(CustomerEntity customerEntity){
+    public void updateStudent(CustomerEntity customerEntity){
         Transaction transaction = session.beginTransaction();
         try {
             session.update(customerEntity);
@@ -40,7 +44,7 @@ public class CustomerRepository {
         }
     }
 
-    public void deleteCustomer(CustomerEntity customerEntity){
+    public void deleteStudent(CustomerEntity customerEntity){
         Transaction transaction = session.beginTransaction();
         try {
             session.delete(customerEntity);
@@ -50,4 +54,5 @@ public class CustomerRepository {
             throw e;
         }
     }
+
 }

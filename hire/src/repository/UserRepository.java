@@ -9,20 +9,20 @@ import util.SessionFactoryConfiguration;
 public class UserRepository {
     Session session = SessionFactoryConfiguration.getInstance().getSession();
     
-    public Integer saveUser(UserEntity userEntity){
+    public Long saveUser(UserEntity userEntity){
 
         Transaction transaction = session.beginTransaction();
         try {
-            Integer id = (Integer)session.save(userEntity);
+            Long id = (Long)session.save(userEntity);
             transaction.commit();
             return id;
         } catch (Exception e) {
             transaction.rollback();
-            return - 1;
+            return null;
         }
     }
 
-    public UserEntity getUser(Integer id) {
+    public UserEntity getUser(Long id) {
         UserEntity UserEntity = session.get(UserEntity.class, id);
         return UserEntity;
     }

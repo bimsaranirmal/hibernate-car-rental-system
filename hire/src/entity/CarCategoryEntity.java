@@ -26,18 +26,16 @@ import lombok.ToString;
 @ToString
 public class CarCategoryEntity {
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "CategoryID")
-    private int categoryID;
+    @GeneratedValue(strategy = GenerationType.AUTO)
+    @Column(name = "CategoryID", nullable = false)
+    private String categoryID;
 
-    @Column(name = "CategoryName")
+    @Column(name = "CategoryName", length = 50, nullable = false)
     private String categoryName;
 
-    @Column(name = "DailyRate")
-    private double dailyRate;
+   
 
-    @OneToMany(mappedBy = "carCategory", cascade = CascadeType.ALL)
-    private List<CarEntity> cars;
+    
 
     
 }
