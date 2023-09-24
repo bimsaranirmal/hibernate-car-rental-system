@@ -84,6 +84,7 @@ public class AddHirePanel extends javax.swing.JPanel {
         dateLabel = new javax.swing.JLabel();
         calButton = new javax.swing.JButton();
         balButton = new javax.swing.JButton();
+        balanceLabel1 = new javax.swing.JLabel();
         formPanel1 = new javax.swing.JPanel();
         custIdLabel = new javax.swing.JLabel();
         rentidLabel = new javax.swing.JLabel();
@@ -228,22 +229,24 @@ public class AddHirePanel extends javax.swing.JPanel {
                                                 .addComponent(carDataLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 322, javax.swing.GroupLayout.PREFERRED_SIZE))))
                                     .addGroup(formPanelLayout.createSequentialGroup()
                                         .addGap(37, 37, 37)
-                                        .addGroup(formPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                            .addGroup(formPanelLayout.createSequentialGroup()
-                                                .addComponent(balanceLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                                .addGap(8, 8, 8)
-                                                .addComponent(balenceText, javax.swing.GroupLayout.PREFERRED_SIZE, 111, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                                .addComponent(balButton))
-                                            .addComponent(dateLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 91, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                            .addGroup(formPanelLayout.createSequentialGroup()
-                                                .addComponent(perDayRentLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 104, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                                .addGap(4, 4, 4)
-                                                .addComponent(perDayRentText, javax.swing.GroupLayout.PREFERRED_SIZE, 92, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                            .addGroup(formPanelLayout.createSequentialGroup()
-                                                .addComponent(rentELabel, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                                .addComponent(rentText, javax.swing.GroupLayout.PREFERRED_SIZE, 111, javax.swing.GroupLayout.PREFERRED_SIZE))))))
+                                        .addGroup(formPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                            .addComponent(balanceLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                            .addGroup(formPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                                .addGroup(formPanelLayout.createSequentialGroup()
+                                                    .addComponent(balanceLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                    .addGap(8, 8, 8)
+                                                    .addComponent(balenceText, javax.swing.GroupLayout.PREFERRED_SIZE, 111, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                                    .addComponent(balButton))
+                                                .addComponent(dateLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 91, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                .addGroup(formPanelLayout.createSequentialGroup()
+                                                    .addComponent(perDayRentLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 104, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                    .addGap(4, 4, 4)
+                                                    .addComponent(perDayRentText, javax.swing.GroupLayout.PREFERRED_SIZE, 92, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                                .addGroup(formPanelLayout.createSequentialGroup()
+                                                    .addComponent(rentELabel, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                                    .addComponent(rentText, javax.swing.GroupLayout.PREFERRED_SIZE, 111, javax.swing.GroupLayout.PREFERRED_SIZE)))))))
                             .addComponent(advLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(date1Label, javax.swing.GroupLayout.PREFERRED_SIZE, 91, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addGap(0, 104, Short.MAX_VALUE)))
@@ -293,7 +296,8 @@ public class AddHirePanel extends javax.swing.JPanel {
                         .addComponent(totalLabel)
                         .addComponent(totalText, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addComponent(addButton)
-                        .addComponent(calButton))
+                        .addComponent(calButton)
+                        .addComponent(balanceLabel1))
                     .addComponent(returnCheckBox, javax.swing.GroupLayout.PREFERRED_SIZE, 14, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addContainerGap(16, Short.MAX_VALUE))
         );
@@ -487,10 +491,6 @@ public class AddHirePanel extends javax.swing.JPanel {
         searchCars(); // TODO add your handling code here:
     }//GEN-LAST:event_searchcarButton1ActionPerformed
 
-    private void returnCheckBoxActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_returnCheckBoxActionPerformed
-        returned();// TODO add your handling code here:
-    }//GEN-LAST:event_returnCheckBoxActionPerformed
-
     private void idTextActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_idTextActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_idTextActionPerformed
@@ -523,6 +523,10 @@ public class AddHirePanel extends javax.swing.JPanel {
         searchCustomer();// TODO add your handling code here:
     }//GEN-LAST:event_custTableMouseClicked
 
+    private void returnCheckBoxActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_returnCheckBoxActionPerformed
+        returned();// TODO add your handling code here:
+    }//GEN-LAST:event_returnCheckBoxActionPerformed
+
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton addButton;
@@ -530,6 +534,7 @@ public class AddHirePanel extends javax.swing.JPanel {
     private javax.swing.JTextField advText;
     private javax.swing.JButton balButton;
     private javax.swing.JLabel balanceLabel;
+    private javax.swing.JLabel balanceLabel1;
     private javax.swing.JTextField balenceText;
     private javax.swing.JPanel basePanel;
     private javax.swing.JButton calButton;
@@ -802,26 +807,7 @@ private void searchCar() {
     }
 
     private void returned() {
-        try {
-        // Check if the return checkbox is selected
-        if (returnCheckBox.isSelected()) {
-            String carId = idText.getText();
-            // Update the car availability to "available"
-            updateCarAvailability(carId, true);
-            
-            // Clear the hire-related fields
-            clearHire();
-            
-            // Allow the customer to place a new hire
-            //enableHireFields(true);
-            
-            // Reset the return checkbox to unselected
-            returnCheckBox.setSelected(true);
-        }
-    } catch (Exception ex) {
-        java.util.logging.Logger.getLogger(CustomerPanel.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        JOptionPane.showMessageDialog(this, ex.getMessage());
-    }   }
+         }
 
     private void clear() {
         rentidText.setText("");

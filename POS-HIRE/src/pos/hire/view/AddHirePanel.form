@@ -166,25 +166,28 @@
                                                   </Group>
                                               </Group>
                                               <Group type="102" alignment="0" attributes="0">
-                                                  <EmptySpace min="37" pref="37" max="-2" attributes="0"/>
-                                                  <Group type="103" groupAlignment="0" attributes="0">
-                                                      <Group type="102" alignment="0" attributes="0">
-                                                          <Component id="balanceLabel" min="-2" pref="100" max="-2" attributes="0"/>
-                                                          <EmptySpace min="-2" pref="8" max="-2" attributes="0"/>
-                                                          <Component id="balenceText" min="-2" pref="111" max="-2" attributes="0"/>
-                                                          <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                                                          <Component id="balButton" min="-2" max="-2" attributes="0"/>
-                                                      </Group>
-                                                      <Component id="dateLabel" alignment="0" min="-2" pref="91" max="-2" attributes="0"/>
-                                                      <Group type="102" alignment="0" attributes="0">
-                                                          <Component id="perDayRentLabel" min="-2" pref="104" max="-2" attributes="0"/>
-                                                          <EmptySpace min="-2" pref="4" max="-2" attributes="0"/>
-                                                          <Component id="perDayRentText" min="-2" pref="92" max="-2" attributes="0"/>
-                                                      </Group>
-                                                      <Group type="102" alignment="0" attributes="0">
-                                                          <Component id="rentELabel" min="-2" pref="100" max="-2" attributes="0"/>
-                                                          <EmptySpace max="-2" attributes="0"/>
-                                                          <Component id="rentText" min="-2" pref="111" max="-2" attributes="0"/>
+                                                  <EmptySpace min="-2" pref="37" max="-2" attributes="0"/>
+                                                  <Group type="103" groupAlignment="1" attributes="0">
+                                                      <Component id="balanceLabel1" min="-2" pref="100" max="-2" attributes="0"/>
+                                                      <Group type="103" groupAlignment="0" attributes="0">
+                                                          <Group type="102" alignment="0" attributes="0">
+                                                              <Component id="balanceLabel" min="-2" pref="100" max="-2" attributes="0"/>
+                                                              <EmptySpace min="-2" pref="8" max="-2" attributes="0"/>
+                                                              <Component id="balenceText" min="-2" pref="111" max="-2" attributes="0"/>
+                                                              <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                                                              <Component id="balButton" min="-2" max="-2" attributes="0"/>
+                                                          </Group>
+                                                          <Component id="dateLabel" alignment="0" min="-2" pref="91" max="-2" attributes="0"/>
+                                                          <Group type="102" alignment="0" attributes="0">
+                                                              <Component id="perDayRentLabel" min="-2" pref="104" max="-2" attributes="0"/>
+                                                              <EmptySpace min="-2" pref="4" max="-2" attributes="0"/>
+                                                              <Component id="perDayRentText" min="-2" pref="92" max="-2" attributes="0"/>
+                                                          </Group>
+                                                          <Group type="102" alignment="0" attributes="0">
+                                                              <Component id="rentELabel" min="-2" pref="100" max="-2" attributes="0"/>
+                                                              <EmptySpace max="-2" attributes="0"/>
+                                                              <Component id="rentText" min="-2" pref="111" max="-2" attributes="0"/>
+                                                          </Group>
                                                       </Group>
                                                   </Group>
                                               </Group>
@@ -254,6 +257,7 @@
                                   <Component id="totalText" alignment="3" min="-2" max="-2" attributes="0"/>
                                   <Component id="addButton" alignment="3" min="-2" max="-2" attributes="0"/>
                                   <Component id="calButton" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="balanceLabel1" alignment="3" min="-2" max="-2" attributes="0"/>
                               </Group>
                               <Component id="returnCheckBox" alignment="0" min="-2" pref="14" max="-2" attributes="0"/>
                           </Group>
@@ -408,6 +412,8 @@
                   <Events>
                     <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="balButtonActionPerformed"/>
                   </Events>
+                </Component>
+                <Component class="javax.swing.JLabel" name="balanceLabel1">
                 </Component>
               </SubComponents>
             </Container>

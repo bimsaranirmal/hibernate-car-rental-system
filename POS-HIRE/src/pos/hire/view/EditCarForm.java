@@ -105,10 +105,10 @@ private CarCategoryController carCategoryController;
             }
         });
 
-        brandComboBox.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+        brandComboBox.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Choose", "Toyota", "Nissan", "Micro", "Tata", "Mitshubhishi", "Suzuki", " " }));
         brandComboBox.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
 
-        yearComboBox.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { " 1", " 2", " 3", " 4" }));
+        yearComboBox.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Choose", "2023", "2022", "2021", "2020", "2019", "2018", "2017", "2016", "2015", "2014", "2013", "2012", "2011", "2010", "2009", "2008", "2007", "2006", "2005", "2004", "2003", "2002", "2001", "2000" }));
         yearComboBox.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
 
         carTable.setModel(new javax.swing.table.DefaultTableModel(
